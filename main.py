@@ -1,12 +1,13 @@
+
 from product_manager import add_product
+from file_manager import FileManager
 
 while True:
-    num = input("1, 2, 3, 4 = exit, 5 = test: ")
+    num = input("1 = แสดงสินค้า, 2 = เมนู 2, 3 = เมนู 3, 4 = Exit, 5 = เพิ่มสินค้า: ")
 
     match num:
         case "1":
-            print("1")
-
+            print('1')
         case "2":
             print("2")
 
@@ -18,7 +19,6 @@ while True:
             break
 
         case "5":
-
             add_product()
 
         case _:

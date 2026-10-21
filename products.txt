@@ -1,4 +1,3 @@
-id,name,price,stock,date
-1,Keyboard,1000,5,2026-10-13
-2,Mouse,500,10,2026-10-13
-3,Monitor,5000,3,2026-10-13
+phukao
+keyboard
+kuy

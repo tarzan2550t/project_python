@@ -1,6 +1,9 @@
 
+from unittest import case
+
 from product_manager import add_product
 from file_manager import FileManager
+from report_manager import report_sales_by_product
 
 while True:
     num = input("1 = แสดงสินค้า, 2 = เมนู 2, 3 = เมนู 3, 4 = Exit, 5 = เพิ่มสินค้า: ")
@@ -21,5 +24,9 @@ while True:
         case "5":
             add_product()
 
+        case "6": 
+            report_sales_by_product()
+
         case _:
-            print("กรุณาเลือก 1-5")
+            print("กรุณาเลือก 1-6")
+

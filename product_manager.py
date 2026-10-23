@@ -4,5 +4,6 @@ class Productmaneger:
         self.filemaneger = FileManager()
 
     def show_product(self):
-        data = self.filemaneger.read_file('product.txt')
-        print(f'')
+        datas = self.filemaneger.read_file('products.txt')
+        for data in datas:
+            print(f'{data['id']} , {data['product_name']} , {data['stock']} , {data['date']}')

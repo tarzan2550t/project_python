@@ -82,4 +82,4 @@ def product_report():
     for p in products:
         print(f"{p.id:<6}{p.name:<24}{p.price:>12,.2f}{p.stock:>10}{p.date:>14}")
     print("-" * 68)
-    print(f"รวมทั้งหมด {len(products)} รายการ")
+    print(f"รวมทั้งหมด {len(products)} รายการ")    print(f"รวมทั้งหมด {len(products)} รายการ")

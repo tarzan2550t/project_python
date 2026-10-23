@@ -1,7 +1,6 @@
 
-from unittest import case
 
-from product_manager import add_product
+from product_manager import Productmaneger
 from file_manager import FileManager
 from report_manager import report_sales_by_product
 
@@ -22,7 +21,7 @@ while True:
             break
 
         case "5":
-            add_product()
+            Productmaneger().show_product()
 
         case "6": 
             report_sales_by_product()

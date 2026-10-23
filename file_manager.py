@@ -22,5 +22,5 @@ class FileManager :
     def append_file(self , pahtname , data):
         with open(pahtname , 'a' ,encoding='utf-8') as file : 
             file.write(data+'\n')
-            return 'successfully'   
-
+            return 'successfully'
+         

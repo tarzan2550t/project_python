@@ -1,10 +1,5 @@
 import os
 from datetime import date
-from product import Product
-
-PRODUCT_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "products.txt")
-HEADER = "id,name,price,stock,date"
-
 
 def load_products():
     """อ่านสินค้าทั้งหมดจาก products.txt"""
@@ -41,15 +36,6 @@ def add_product(name, price, stock):
     save_products(products)
     return product
 
-
-def find_product(product_id):
-    """ค้นหาสินค้าตามรหัส (ไม่พบคืน None)"""
-    for p in load_products():
-        if p.id == product_id:
-            return p
-    return None
-
-
 def list_products():
     """แสดงรายการสินค้าทั้งหมด"""
     products = load_products()
@@ -71,5 +57,5 @@ def product_report():
     print("-" * 68)
     for p in products:
         print(f"{p.id:<6}{p.name:<24}{p.price:>12,.2f}{p.stock:>10}{p.date:>14}")
-    print("-" * 68)
-    print(f"รวมทั้งหมด {len(products)} รายการ")
+        print("-" * 68)
+        print(f"รวมทั้งหมด {len(products)} รายการ")

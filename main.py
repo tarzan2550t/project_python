@@ -1,5 +1,3 @@
-
-
 from product_manager import Productmaneger
 from file_manager import FileManager
 from report_manager import report_sales_by_product

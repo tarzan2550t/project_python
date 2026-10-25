@@ -4,6 +4,8 @@ from report_manager import report_sales_by_product
 from sales_manager import SalesManager
 
 while True:
+    print("")
+    print("")
     print("=" * 40)
     print(f"{'MAIN MENU':^40}")
     print("=" * 40)
@@ -29,10 +31,10 @@ while True:
             SalesManager().add_sale()
 
         case "4":
-            print("Show Sales")
+            SalesManager().show_sales()
 
         case "5":
-            print("Report Daily Sales")
+            SalesManager().daily_sales_report()
 
         case "6":
             report_sales_by_product()

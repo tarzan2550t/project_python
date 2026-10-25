@@ -4,6 +4,17 @@ class FileManager :
         with open(pathname, 'r', encoding='utf-8', newline='') as file:
             return list(csv.DictReader(file))
         
+    def write_file(self, pathname, datas):
+        if not datas:
+            return
+
+        with open(pathname, 'w', encoding='utf-8', newline='') as file:
+            writer = csv.DictWriter(
+                file,
+                fieldnames=datas[0].keys()
+            )
+            writer.writeheader()
+            writer.writerows(datas)  
 
     def append_file(self , pathname ,data):
         with open(pathname  , 'a' ,encoding='utf-8') as file : 

@@ -1,26 +1,20 @@
+import csv
 class FileManager :
     def read_file(self , pathname):
-        with open(pathname , 'r' , encoding='utf-8') as file:
-            items =  [data.strip().split(',') for data in file.readlines()]
-            datas = []
-            for item in items: 
-                products = {
-                    'id': item[0],
-                    'product_name': item[1],
-                    'stock': item[2],
-                    'date': item[3],
-                }
-                datas.append(products)
-            return datas
-            
+        with open(pathname, 'r', encoding='utf-8', newline='') as file:
+            return list(csv.DictReader(file))
         
-    def write_file(self , pahtname , datas):
-        with open(pahtname , 'w' , encoding='utf-8') as file :
-            file.writelines(datas)
-            return 'successfully'
 
-    def append_file(self , pahtname , data):
-        with open(pahtname , 'a' ,encoding='utf-8') as file : 
-            file.write(data+'\n')
-            return 'successfully'
-         
+    def append_file(self , pathname ,data):
+        with open(pathname  , 'a' ,encoding='utf-8') as file : 
+            file.write(data+'\n') #ค่าที่ส่งมาเราแปลงเป็น string เเล้ว
+            print('successfully')
+        
+    def read_file_id(self , id_pathname):
+            with open(id_pathname, 'r', encoding='utf-8') as file:
+               return  int(file.read().strip())
+
+    def write_file_id(self , id_pathname , product_id):
+        with open(id_pathname , 'w', encoding='utf-8') as file:
+            file.write(str(product_id))
+    

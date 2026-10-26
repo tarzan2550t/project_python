@@ -4,7 +4,7 @@ from file_manager import FileManager
 
 class SalesManager:
     def __init__(self):
-        self.sales_path = 'sales.txt'
+        self.sales_path = 'sales.csv'
         self.FileManager = FileManager()
 
     def generate_sale_id(self):
@@ -37,7 +37,7 @@ class SalesManager:
                 return
 
             # อ่านข้อมูลสินค้า
-            products = self.FileManager.read_file('products.txt')
+            products = self.FileManager.read_file('products.csv')
 
             # ค้นหาสินค้าจาก ID
             product_found = None
@@ -65,7 +65,7 @@ class SalesManager:
             product_found['stock'] = str(stock - self.quantity)
 
             # บันทึกสต็อกใหม่ลง products.txt
-            self.FileManager.write_file('products.txt', products)
+            self.FileManager.write_file('products.csv', products)
 
             # สร้างข้อมูลการขาย
             self.sale_date = date.today()

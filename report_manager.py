@@ -4,7 +4,7 @@ def report_sales_by_product():
 
     # Read product data
     try:
-        with open('products.txt', 'r', encoding='utf-8') as file:
+        with open('products.csv', 'r', encoding='utf-8') as file:
             lines = file.readlines()
 
             for line in lines[1:]:
@@ -35,7 +35,7 @@ def report_sales_by_product():
 
     # Read sales data
     try:
-        with open('sales.txt', 'r', encoding='utf-8') as file:
+        with open('sales.csv', 'r', encoding='utf-8') as file:
             lines = file.readlines()
 
             for line in lines[1:]:

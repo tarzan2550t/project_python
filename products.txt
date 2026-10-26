@@ -1,2 +1,0 @@
-id,product_name,price,stock
-P001,keyboard,1500,10

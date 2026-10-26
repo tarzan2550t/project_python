@@ -1,7 +1,7 @@
 from file_manager import FileManager
 class Productmaneger: 
-    product_path = 'products.txt' 
-    id_pathname = 'next_id.txt'
+    product_path = 'products.csv' 
+    id_pathname = 'next_id.csv'
     file_manager = FileManager()
 
 
